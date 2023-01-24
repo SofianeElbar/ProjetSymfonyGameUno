@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+  <h1>{{category.name}}</h1>
+  <div>
+    {% for game in category.games %}
+    <span>{{game.title}}</span>
+    <img src="{{asset('uploads/' ~ game.picture)}}" alt="{{ game.title }}">
+
+    {% endfor %}
+  </div>
+    
+{% endblock %}

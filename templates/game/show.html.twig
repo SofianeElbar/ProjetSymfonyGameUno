@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+  <h1>{{game.title}}</h1>
+  <div>
+    {% for cat in game.categories %}
+    <span>{{cat.name}}</span>
+    {% endfor %}
+  </div>
+    
+{% endblock %}
